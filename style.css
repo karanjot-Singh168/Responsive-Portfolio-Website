@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Asap', sans-serif;
+    background-color: #EBEBEB;
+    color:white
+    
+}
+.header-container{
+    background-color: rgb(60,60,60);
+    min-height: 100px;
+    
+    position: fixed;
+width:100%;
+
+    
+}
+.logo span{
+    font-weight: 700;
+}
+
+nav a{
+    text-decoration: none;
+color: white;
+    border: 1px solid white;
+    padding: 11px 25px;
+    margin-left: 20px;
+    
+}
+
+/* global view aka desktop view */
+.container{
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 150px;
+}
+header{
+    
+    min-height: 100px;
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    
+}
+.col{
+    background-color: rgb(43,226,147);
+    width:30%;
+    margin-bottom: 40px;
+    
+}
+.col p{
+    color: white;
+    font-size: 0.875rem;
+    padding:10px 20px;
+    line-height: 1.25rem;
+}
+.hide-desktop-only{
+    display: none;
+}
+.col img{
+    width:100%;
+    height: auto;
+}
+.col p::first-line{
+   font-weight: 700;
+
+}
+.mob-wrapper{
+    display: none;
+}
+
+
+/* tablet view */
+@media (max-width:768px){
+    .col{
+        width:45%;
+    }
+
+    .hide-desktop-only{
+        display: block;
+    }
+    header{
+        display: flex;   
+        text-align: center;   
+        }
+        .logo{
+          
+          padding:40px 0;
+          
+          
+        }
+        nav{
+            display: none;
+        }
+        
+        nav a{
+            display: block;
+            margin-left: 0;
+            
+        
+        }
+        .header-container{
+        position: relative;
+        }
+        .container{
+            padding-top:40px
+        }
+        .mob-wrapper{
+            display:block;
+            padding-right: 30px;
+        }
+        .navbutton{
+            text-decoration: none;
+            background-color: coral;
+            color: white;
+            display: block;
+            border: 1px solid white;
+            padding: 15px 30px;
+            margin-left: -60px;
+            text-align: center;
+        }
+        .mob-nav{
+            display: none;
+            position: absolute;
+            padding-top: 10px;
+        }
+        
+        
+}
+/* mobile view */
+@media (max-width:400px){
+    .col{
+        width:100%
+    }
+
+    .hide-mobile-only{
+        display: none;
+    }
+    
+    
+}
